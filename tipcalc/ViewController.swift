@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var buildField: UITextField!
+    @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         tipControl.selectedSegmentIndex = Defaults.getPercentageChoice()
+        billField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        let billAmount = (buildField.text! as NSString).doubleValue
+        let billAmount = (billField.text! as NSString).doubleValue
         let tip = billAmount * getTipPercentage()
         let total = billAmount + tip
         

@@ -87,7 +87,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="buildField" destination="QTG-Uc-vUN" id="8se-MX-MeP"/>
+                        <outlet property="billField" destination="QTG-Uc-vUN" id="BM0-zI-nLv"/>
                         <outlet property="tipControl" destination="EiI-Yj-13O" id="dJo-dR-yXf"/>
                         <outlet property="tipLabel" destination="E1O-iI-fZV" id="90I-MI-3ht"/>
                         <outlet property="totalLabel" destination="uNf-2j-DR1" id="cnR-ap-ftA"/>
