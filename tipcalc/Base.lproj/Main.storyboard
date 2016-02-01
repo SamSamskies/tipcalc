@@ -121,6 +121,7 @@
                                     <segment title="20%"/>
                                 </segments>
                                 <connections>
+                                    <action selector="onDefaultChanged:" destination="B9u-J4-fzG" eventType="valueChanged" id="M7u-O8-hfG"/>
                                     <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hN2-7D-zE7"/>
                                 </connections>
                             </segmentedControl>
@@ -130,6 +131,9 @@
                     <navigationItem key="navigationItem" id="wqG-PC-YZ6"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="tipControl" destination="bXn-V8-8Nn" id="Mb7-op-AeF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgW-Qm-znP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

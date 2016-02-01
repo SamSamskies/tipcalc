@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        tipControl.selectedSegmentIndex = Defaults.getPercentageChoice()
     }
 
     override func didReceiveMemoryWarning() {

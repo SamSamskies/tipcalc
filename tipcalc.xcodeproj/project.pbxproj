@@ -15,6 +15,7 @@
 		276A82071C5D8AD100C51F6E /* tipcalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A82061C5D8AD100C51F6E /* tipcalcTests.swift */; };
 		276A82121C5D8AD100C51F6E /* tipcalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A82111C5D8AD100C51F6E /* tipcalcUITests.swift */; };
 		276A82201C5E04F700C51F6E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A821F1C5E04F700C51F6E /* SettingsViewController.swift */; };
+		276A82221C5FF84A00C51F6E /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A82211C5FF84A00C51F6E /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		276A82111C5D8AD100C51F6E /* tipcalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipcalcUITests.swift; sourceTree = "<group>"; };
 		276A82131C5D8AD100C51F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A821F1C5E04F700C51F6E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		276A82211C5FF84A00C51F6E /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				276A81F81C5D8AD100C51F6E /* Assets.xcassets */,
 				276A81FA1C5D8AD100C51F6E /* LaunchScreen.storyboard */,
 				276A81FD1C5D8AD100C51F6E /* Info.plist */,
+				276A82211C5FF84A00C51F6E /* Defaults.swift */,
 			);
 			path = tipcalc;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276A81F41C5D8AD100C51F6E /* ViewController.swift in Sources */,
+				276A82221C5FF84A00C51F6E /* Defaults.swift in Sources */,
 				276A81F21C5D8AD100C51F6E /* AppDelegate.swift in Sources */,
 				276A82201C5E04F700C51F6E /* SettingsViewController.swift in Sources */,
 			);

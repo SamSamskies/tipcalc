@@ -10,10 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tipControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tipControl.selectedSegmentIndex = Defaults.getPercentageChoice()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +23,11 @@ class SettingsViewController: UIViewController {
     }
     
 
+    @IBAction func onDefaultChanged(sender: UISegmentedControl) {
+        let defaultPercentageChoice = sender.selectedSegmentIndex
+        
+        Defaults.savePercentageChoice(defaultPercentageChoice)
+    }
     /*
     // MARK: - Navigation
 
