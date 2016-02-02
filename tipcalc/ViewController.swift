@@ -17,10 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    let storage = NSUserDefaults.standardUserDefaults()
-    let lastAppStartDateKey = "last_app_start_date"
-    let billAmountKey = "bill_amount"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
