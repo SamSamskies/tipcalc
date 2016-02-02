@@ -2,7 +2,7 @@
 
 This is a Tip Calculator application for iOS submitted as the [pre-assignment](https://gist.github.com/timothy1ee/7747214) requirement for Codepath.
 
-Time spent: TBD
+Time spent: approx 10 hours
 
 Completed:
 
@@ -16,3 +16,7 @@ Completed:
 Notes:
 
 * Designed for iPhone 6.
+
+![Video Walkthrough](tipcalc-demo.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/)
