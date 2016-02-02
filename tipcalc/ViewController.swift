@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var zeroBillLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -30,10 +32,11 @@ class ViewController: UIViewController {
         // from previous app usage.
         if (Storage.getMinutesSinceLastAppStart() < 10) {
             billField.text = Storage.getBillAmount()
-            updateTipAndTotalOutlets()
+            updateOutlets()
         } else {
             tipLabel.text = "$0.00"
             totalLabel.text = "$0.00"
+            showZeroBillLabel()
         }
         
         billField.becomeFirstResponder()
@@ -47,23 +50,43 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        updateTipAndTotalOutlets()
+        updateOutlets()
         Storage.saveBillAmount(billField.text!)
     }
     
-    func updateTipAndTotalOutlets() {
+    func updateOutlets() {
         let billAmount = (billField.text! as NSString).doubleValue
         let tip = billAmount * getTipPercentage()
         let total = billAmount + tip
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        if (billAmount == 0) {
+            showZeroBillLabel()
+        } else {
+            showNormalBillLabel()
+        }
     }
     
     func getTipPercentage() -> Double {
         let tipPercentages = [0.15, 0.18, 0.2]
         
         return tipPercentages[tipControl.selectedSegmentIndex]
+    }
+    
+    func showZeroBillLabel() {
+        UIView.animateWithDuration(0.2, animations: {
+            self.billField.frame.origin.x = 200
+            self.zeroBillLabel.frame.origin.x = 20
+        })
+    }
+    
+    func showNormalBillLabel() {
+        UIView.animateWithDuration(0.2, animations: {
+            self.billField.frame.origin.x = 20
+            self.zeroBillLabel.frame.origin.x = 200
+        })
     }
 
 }
